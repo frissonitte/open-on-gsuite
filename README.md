@@ -37,13 +37,32 @@ This app uses the Google Drive API and OAuth 2.0. Since this is a personal tool,
 
     Download the client_secret.json file
 
-2. Run the app
+2. Install dependencies
+
+Install the required dependencies using pip:
+
+pip install -r requirements.txt
+
+3. Build the .exe file
+
+To convert this Python script into an .exe file, you'll need PyInstaller.
+
+First, install PyInstaller:
+
+pip install pyinstaller
+
+Then, build the .exe with your app's icon:
+
+pyinstaller --onefile --icon=static/app_icon.ico open_on_gsuite.py
+
+This will generate an executable in the dist/ folder.
+4. Run the app
 
     On first run, it will ask you to select your client_secret.json file
 
     You'll be redirected to a Google login page — sign in and allow access
 
-    From now on, double-clicking an Office file will open it in Google Workspace
+    Done! From now on, double-clicking an Office file will open it in Google Workspace
 
 📁 File Storage
 
